@@ -75,21 +75,21 @@ function App() {
   }, []);
 
   const foodItems = [
-    { id: 1, name: 'Spring Rolls', price: 580, category: 'Starters', image: '🥢' },
-    { id: 2, name: 'Chicken Wings', price: 746, category: 'Starters', image: '🍗' },
-    { id: 3, name: 'Garlic Bread', price: 414, category: 'Starters', image: '🥖' },
-    { id: 4, name: 'Mozzarella Sticks', price: 663, category: 'Starters', image: '🧀' },
-    { id: 5, name: 'Pizza Margherita', price: 1078, category: 'Main Course', image: '🍕' },
-    { id: 6, name: 'Burger Deluxe', price: 1244, category: 'Main Course', image: '🍔' },
-    { id: 7, name: 'Pasta Alfredo', price: 912, category: 'Main Course', image: '🍝' },
-    { id: 8, name: 'Grilled Chicken', price: 1410, category: 'Main Course', image: '🍗' },
-    { id: 9, name: 'Fish & Chips', price: 1161, category: 'Main Course', image: '🐟' },
-    { id: 10, name: 'Ice Cream', price: 414, category: 'Desserts', image: '🍦' },
-    { id: 11, name: 'Chocolate Cake', price: 580, category: 'Desserts', image: '🍰' },
-    { id: 12, name: 'Tiramisu', price: 663, category: 'Desserts', image: '🧁' },
-    { id: 13, name: 'Cola', price: 248, category: 'Beverages', image: '🥤' },
-    { id: 14, name: 'Fresh Juice', price: 414, category: 'Beverages', image: '🧃' },
-    { id: 15, name: 'Coffee', price: 331, category: 'Beverages', image: '☕' },
+    { id: 1, name: 'Spring Rolls', price: 500, category: 'Starters', image: '🥢' },
+    { id: 2, name: 'Chicken Wings', price: 700, category: 'Starters', image: '🍗' },
+    { id: 3, name: 'Garlic Bread', price: 400, category: 'Starters', image: '🥖' },
+    { id: 4, name: 'Mozzarella Sticks', price: 600, category: 'Starters', image: '🧀' },
+    { id: 5, name: 'Pizza Margherita', price: 1000, category: 'Main Course', image: '🍕' },
+    { id: 6, name: 'Burger Deluxe', price: 1200, category: 'Main Course', image: '🍔' },
+    { id: 7, name: 'Pasta Alfredo', price: 900, category: 'Main Course', image: '🍝' },
+    { id: 8, name: 'Grilled Chicken', price: 1000, category: 'Main Course', image: '🍗' },
+    { id: 9, name: 'Fish & Chips', price: 1100, category: 'Main Course', image: '🐟' },
+    { id: 10, name: 'Ice Cream', price: 400, category: 'Desserts', image: '🍦' },
+    { id: 11, name: 'Chocolate Cake', price: 500, category: 'Desserts', image: '🍰' },
+    { id: 12, name: 'Tiramisu', price: 600, category: 'Desserts', image: '🧁' },
+    { id: 13, name: 'Cola', price: 200, category: 'Beverages', image: '🥤' },
+    { id: 14, name: 'Fresh Juice', price: 400, category: 'Beverages', image: '🧃' },
+    { id: 15, name: 'Coffee', price: 300, category: 'Beverages', image: '☕' },
   ];
 
   const categories = [...new Set(foodItems.map(item => item.category))];
@@ -360,7 +360,7 @@ function App() {
                           <span className="text-2xl">{item.image}</span>
                           <div>
                             <h3 className="font-medium text-gray-800">{item.name}</h3>
-                            <span>₹{currentOrder.reduce((sum, item) => sum + (item.price * item.quantity), 0)}</span>
+                            <span>₹{item.price * item.quantity}</span>
                           </div>
                         </div>
                         <div className="flex items-center space-x-2">
@@ -387,7 +387,7 @@ function App() {
                     <div className="mt-6 border-t pt-4">
                       <div className="flex justify-between items-center text-lg font-bold mb-6">
                         <span>Total:</span>
-                        <span>${currentOrder.reduce((sum, item) => sum + (item.price * item.quantity), 0).toFixed(2)}</span>
+                        <span>₹{currentOrder.reduce((sum, item) => sum + (item.price * item.quantity), 0)}</span>
                       </div>
                       <button
                         onClick={saveOrder}
