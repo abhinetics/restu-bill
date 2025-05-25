@@ -189,7 +189,7 @@ function App() {
       <header className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-lg shadow-sm z-40 px-3 py-2 sm:px-4 sm:py-3">
         <div className="max-w-6xl mx-auto flex justify-between items-center">
           <h1 className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-green-600 to-blue-600 bg-clip-text text-transparent">
-            Orders
+            IPO - Instant Platter Offering
           </h1>
           <div className="flex gap-2 sm:gap-3">
             {/* Enhanced button styling with better touch targets */}
@@ -243,7 +243,7 @@ function App() {
         </div>
       </header>
 
-      // Enhanced search bar with better mobile UX
+     
       <div className="sticky top-14 sm:top-16 pt-3 pb-2 px-3 sm:px-4 bg-gradient-to-b from-gray-50 via-gray-50/90 to-transparent z-30">
         <div className="max-w-lg mx-auto relative">
           <input
