@@ -188,8 +188,9 @@ function App() {
       {/* Enhanced header with better mobile spacing */}
       <header className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-lg shadow-sm z-40 px-3 py-2 sm:px-4 sm:py-3">
         <div className="max-w-6xl mx-auto flex justify-between items-center">
-          <h1 className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-green-600 to-blue-600 bg-clip-text text-transparent">
-            IPO - Instant Platter Offering
+          <h1 className="text-lg sm:text-xl md:text-2xl font-bold bg-gradient-to-r from-green-600 to-blue-600 bg-clip-text text-transparent text-center px-4">
+            <span className="block sm:inline">IPO</span>
+            <span className="block text-sm sm:text-xl md:text-2xl sm:inline sm:ml-2">Instant Platter Offering</span>
           </h1>
           <div className="flex gap-2 sm:gap-3">
             {/* Enhanced button styling with better touch targets */}
