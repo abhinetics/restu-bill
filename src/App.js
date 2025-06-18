@@ -74,23 +74,266 @@ function App() {
     }
   }, []);
 
+  // const foodItems = [
+  //   { id: 1, name: 'Spring Rolls', price: 500, category: 'Starters', image: '🥢' },
+  //   { id: 2, name: 'Chicken Wings', price: 700, category: 'Starters', image: '🍗' },
+  //   { id: 3, name: 'Garlic Bread', price: 400, category: 'Starters', image: '🥖' },
+  //   { id: 4, name: 'Mozzarella Sticks', price: 600, category: 'Starters', image: '🧀' },
+  //   { id: 5, name: 'Pizza Margherita', price: 1000, category: 'Main Course', image: '🍕' },
+  //   { id: 6, name: 'Burger Deluxe', price: 1200, category: 'Main Course', image: '🍔' },
+  //   { id: 7, name: 'Pasta Alfredo', price: 900, category: 'Main Course', image: '🍝' },
+  //   { id: 8, name: 'Grilled Chicken', price: 1000, category: 'Main Course', image: '🍗' },
+  //   { id: 9, name: 'Fish & Chips', price: 1100, category: 'Main Course', image: '🐟' },
+  //   { id: 10, name: 'Ice Cream', price: 400, category: 'Desserts', image: '🍦' },
+  //   { id: 11, name: 'Chocolate Cake', price: 500, category: 'Desserts', image: '🍰' },
+  //   { id: 12, name: 'Tiramisu', price: 600, category: 'Desserts', image: '🧁' },
+  //   { id: 13, name: 'Cola', price: 200, category: 'Beverages', image: '🥤' },
+  //   { id: 14, name: 'Fresh Juice', price: 400, category: 'Beverages', image: '🧃' },
+  //   { id: 15, name: 'Coffee', price: 300, category: 'Beverages', image: '☕' },
+  // ];
+
+
   const foodItems = [
-    { id: 1, name: 'Spring Rolls', price: 500, category: 'Starters', image: '🥢' },
-    { id: 2, name: 'Chicken Wings', price: 700, category: 'Starters', image: '🍗' },
-    { id: 3, name: 'Garlic Bread', price: 400, category: 'Starters', image: '🥖' },
-    { id: 4, name: 'Mozzarella Sticks', price: 600, category: 'Starters', image: '🧀' },
-    { id: 5, name: 'Pizza Margherita', price: 1000, category: 'Main Course', image: '🍕' },
-    { id: 6, name: 'Burger Deluxe', price: 1200, category: 'Main Course', image: '🍔' },
-    { id: 7, name: 'Pasta Alfredo', price: 900, category: 'Main Course', image: '🍝' },
-    { id: 8, name: 'Grilled Chicken', price: 1000, category: 'Main Course', image: '🍗' },
-    { id: 9, name: 'Fish & Chips', price: 1100, category: 'Main Course', image: '🐟' },
-    { id: 10, name: 'Ice Cream', price: 400, category: 'Desserts', image: '🍦' },
-    { id: 11, name: 'Chocolate Cake', price: 500, category: 'Desserts', image: '🍰' },
-    { id: 12, name: 'Tiramisu', price: 600, category: 'Desserts', image: '🧁' },
-    { id: 13, name: 'Cola', price: 200, category: 'Beverages', image: '🥤' },
-    { id: 14, name: 'Fresh Juice', price: 400, category: 'Beverages', image: '🧃' },
-    { id: 15, name: 'Coffee', price: 300, category: 'Beverages', image: '☕' },
+    { id: 1, name: 'Aalu Paratha', price: 30, category: 'Parathas', image: '🫓' },
+    { id: 2, name: 'Aalu Pyazz Paratha', price: 40, category: 'Parathas', image: '🫓' },
+    { id: 3, name: 'Gobhi Paratha', price: 50, category: 'Parathas', image: '🫓' },
+    { id: 4, name: 'Paneer Paratha', price: 60, category: 'Parathas', image: '🫓' },
+    { id: 5, name: 'Mix Paratha', price: 70, category: 'Parathas', image: '🫓' },
+    { id: 6, name: 'Double Egg Paratha', price: 70, category: 'Parathas', image: '🫓' },
+    { id: 7, name: 'Mooli Paratha (Seasonal)', price: 50, category: 'Parathas', image: '🫓' },
+    { id: 8, name: 'Boiled Egg (2 Pcs)', price: 30, category: 'Eggs & Omelettes', image: '🥚' },
+  { id: 9, name: 'Plain Omelette', price: 40, category: 'Eggs & Omelettes', image: '🍳' },
+  { id: 10, name: 'Vegetable Omelette', price: 50, category: 'Eggs & Omelettes', image: '🍳' },
+  { id: 11, name: 'Bread Omelette', price: 70, category: 'Eggs & Omelettes', image: '🍞' },
+  { id: 12, name: 'Veg Grilled', price: 70, category: 'Sandwiches', image: '🥪' },
+  { id: 13, name: 'Corn Grilled', price: 80, category: 'Sandwiches', image: '🌽' },
+  { id: 14, name: 'Cheese Aalu Grilled', price: 100, category: 'Sandwiches', image: '🧀' },
+  { id: 15, name: 'Paneer Grilled', price: 120, category: 'Sandwiches', image: '🧀' },
+  { id: 16, name: 'Chicken Grilled', price: 130, category: 'Sandwiches', image: '🍗' },
+  { id: 17, name: 'Chole Bhature (2 pcs)', price: 80, category: 'Combos', image: '🍽' },
+  { id: 18, name: 'Chole Puri (4 pcs)', price: 80, category: 'Combos', image: '🍽' },
+  { id: 19, name: 'Special Adrak Chai', price: 25, category: 'Beverages', image: '☕' },
+  { id: 20, name: 'Hot Coffee', price: 35, category: 'Beverages', image: '☕' },
+  { id: 21, name: 'Mix Veg Noodles', price: 90, category: 'Noodles', image: '🍜' },
+  { id: 22, name: 'Corn Noodles', price: 100, category: 'Noodles', image: '🌽' },
+  { id: 23, name: 'Hakka Noodles', price: 100, category: 'Noodles', image: '🍜' },
+  { id: 24, name: 'Chilli Garlic Noodles', price: 100, category: 'Noodles', image: '🌶️' },
+  { id: 25, name: 'Paneer Noodles', price: 120, category: 'Noodles', image: '🧀' },
+  { id: 26, name: 'Egg Noodles', price: 120, category: 'Noodles', image: '🥚' },
+  { id: 27, name: 'Chicken Noodles', price: 140, category: 'Noodles', image: '🍗' },
+  { id: 28, name: 'White Sauce Pasta', price: 100, category: 'Pasta', image: '🍝' },
+  { id: 29, name: 'Red Sauce Pasta', price: 100, category: 'Pasta', image: '🍝' },
+  { id: 30, name: 'Mix Sauce Pasta', price: 120, category: 'Pasta', image: '🍝' },
+  { id: 31, name: 'Veg Fried Rice', price: 100, category: 'Fried Rice', image: '🍚' },
+  { id: 32, name: 'Corn Fried Rice', price: 120, category: 'Fried Rice', image: '🌽' },
+  { id: 33, name: 'Paneer Fried Rice', price: 130, category: 'Fried Rice', image: '🧀' },
+  { id: 34, name: 'Egg Fried Rice', price: 130, category: 'Fried Rice', image: '🥚' },
+  { id: 35, name: 'Garlic Schezwan Fried Rice', price: 150, category: 'Fried Rice', image: '🌶️' },
+  { id: 36, name: 'Chicken Fried Rice', price: 150, category: 'Fried Rice', image: '🍗' },
+  // Burgers 🍔
+  { id: 37, name: 'Aalu Tikki Burger', price: 50, category: 'Burgers', image: '🍔' },
+  { id: 38, name: 'Double Aalu Tikki Burger', price: 70, category: 'Burgers', image: '🍔' },
+  { id: 39, name: 'Cheesy Veggie Burger', price: 70, category: 'Burgers', image: '🧀' },
+  { id: 40, name: 'Paneer Burger', price: 80, category: 'Burgers', image: '🧀' },
+  { id: 41, name: 'Chicken Burger', price: 80, category: 'Burgers', image: '🍗' },
+
+  // Fries 🍟
+  { id: 42, name: 'French Fries (Normal/Salty)', price: 100, category: 'Fries', image: '🍟' },
+  { id: 43, name: 'Peri-Peri Fries', price: 130, category: 'Fries', image: '🍟' },
+
+  // Maggie 🍜
+  { id: 44, name: 'Plain Maggie', price: 30, category: 'Maggie', image: '🍜' },
+  { id: 45, name: 'Butter Vegetable Maggie', price: 40, category: 'Maggie', image: '🍜' },
+  { id: 46, name: 'Sweet Corn Maggie', price: 50, category: 'Maggie', image: '🌽' },
+  { id: 47, name: 'Chicken Maggie', price: 80, category: 'Maggie', image: '🍗' },
+
+  // Nuggets 🍗
+  { id: 48, name: 'Veg Nuggets (8 pcs)', price: 100, category: 'Nuggets', image: '🥬' },
+  { id: 49, name: 'Chicken Nuggets (4 pcs)', price: 100, category: 'Nuggets', image: '🍗' },
+  { id: 50, name: 'Masala Aalu Roll', price: 40, category: 'Kathi Rolls', image: '🌯' },
+  { id: 51, name: 'Veggie Loaded Roll', price: 40, category: 'Kathi Rolls', image: '🌯' },
+  { id: 52, name: 'Paneer Roll', price: 60, category: 'Kathi Rolls', image: '🧀' },
+  { id: 53, name: 'Double Egg Roll', price: 60, category: 'Kathi Rolls', image: '🥚' },
+  { id: 54, name: 'Chicken Roll', price: 100, category: 'Kathi Rolls', image: '🍗' },
+  { id: 55, name: 'Spring Roll', price: 60, category: 'Kathi Rolls', image: '🥢' },
+  { id: 56, name: 'Peanut Papad Masala', price: 100, category: 'Chatpata Chakna Veg', image: '🥜' },
+  { id: 57, name: 'Crispy Corn', price: 150, category: 'Chatpata Chakna Veg', image: '🌽' },
+  { id: 58, name: 'Honey Chilli Potato', price: 150, category: 'Chatpata Chakna Veg', image: '🍯' },
+  { id: 59, name: 'Veg Manchurian Dry', price: 130, category: 'Chatpata Chakna Veg', image: '🥦' },
+  { id: 60, name: 'Veg Manchurian Gravy', price: 150, category: 'Chatpata Chakna Veg', image: '🥦' },
+  { id: 61, name: 'Cheese Chilli Paneer', price: 200, category: 'Chatpata Chakna Veg', image: '🧀' },
+  { id: 62, name: 'Chilli Chicken (6 pcs)', price: 220, category: 'Chatpata Chakna Non-Veg', image: '🌶️' },
+  { id: 63, name: 'Fry Chicken (8 pcs)', price: 220, category: 'Chatpata Chakna Non-Veg', image: '🍗' },
+  { id: 64, name: 'KFC Fry Chicken (8 pcs)', price: 280, category: 'Chatpata Chakna Non-Veg', image: '🍗' },
+  { id: 65, name: 'KFC Fry Chicken Boneless (8 pcs)', price: 300, category: 'Chatpata Chakna Non-Veg', image: '🍗' },
+   // Vegetarian Cuisine 🍅🍆
+   { id: 66, name: 'Aalu Jeera', price: 70, category: 'Vegetarian Cuisine', image: '🥔' },
+   { id: 67, name: 'Mixed Veg', price: 90, category: 'Vegetarian Cuisine', image: '🥕' },
+   { id: 68, name: 'Yellow Daal Tadka', price: 90, category: 'Vegetarian Cuisine', image: '🍲' },
+   { id: 69, name: 'Daal Makhani', price: 100, category: 'Vegetarian Cuisine', image: '🥣' },
+   { id: 70, name: 'Aloo Black Chana Masala', price: 120, category: 'Vegetarian Cuisine', image: '🫘' },
+   { id: 71, name: 'Chole Masala (Dry)', price: 120, category: 'Vegetarian Cuisine', image: '🧆' },
+   { id: 72, name: 'Chole Masala (Gravy)', price: 140, category: 'Vegetarian Cuisine', image: '🧆' },
+   { id: 73, name: 'Jammu Rajma', price: 140, category: 'Vegetarian Cuisine', image: '🍛' },
+   { id: 74, name: 'Mushroom Mix Veg', price: 120, category: 'Vegetarian Cuisine', image: '🍄' },
+   { id: 75, name: 'Punjabi Kadhi', price: 120, category: 'Vegetarian Cuisine', image: '🍲' },
+   { id: 76, name: 'Butter Paneer Bhurji', price: 150, category: 'Vegetarian Cuisine', image: '🧀' },
+   { id: 77, name: 'Kadhai Paneer', price: 130, category: 'Vegetarian Cuisine', image: '🧀' },
+   { id: 78, name: 'Butter Paneer Masala', price: 130, category: 'Vegetarian Cuisine', image: '🧀' },
+   { id: 79, name: 'Paneer do Pyazza', price: 130, category: 'Vegetarian Cuisine', image: '🧅' },
+   { id: 80, name: 'Shahi Paneer', price: 150, category: 'Vegetarian Cuisine', image: '👑' },
+ 
+   // Thalis (Veg) 🍛
+   { id: 81, name: 'Veg Thali (Dal, Sabzi, 3 Roti, Rice, Raita, Achaar, Salad) ', price: 90, category: 'Thalis (Veg)', image: '🍛' },
+   { id: 82, name: 'Paneer, Dal, Sabzi, 3 Roti, Rice, Raita, Achaar, Salad', price: 130, category: 'Thalis (Veg)', image: '🧀' },
+   { id: 83, name: 'Paneer, Dal, Sabzi, 3 Roti, 2 Parathas, Rice, Raita, Achaar, Salad, Papad, Sweet', price: 200, category: 'Thalis (Veg)', image: '🌟' },
+   // Thalis (Non-Veg) 🍗
+   {
+    id: 84,
+    name: 'Egg Curry Thali (2 Eggs Curry, 3 Roti, Rice, Raita, Achaar, Salad)',
+    price: 140,
+    category: 'Thalis (Non-Veg)',
+    image: '🥚'
+  },
+  {
+    id: 85,
+    name: 'Chicken Thali (Chicken Curry (3 pcs), 3 Roti, Rice, Raita, Achaar, Salad)',
+    price: 160,
+    category: 'Thalis (Non-Veg)',
+    image: '🍗'
+  },
+  {
+    id: 86,
+    name: 'Boneless Chicken Thali (Boneless Chicken Curry (3 pcs), 3 Roti, Rice, Raita, Achaar, Salad)',
+    price: 180,
+    category: 'Thalis (Non-Veg)',
+    image: '🍗'
+  },
+  {
+    id: 87,
+    name: 'IPO Special Chicken Thali (Chicken Curry (4 pcs), 3 Roti, 2 Parathas, Rice, Raita, Achaar, Salad, Papad, Sweet)',
+    price: 220,
+    category: 'Thalis (Non-Veg)',
+    image: '🌟'
+  },
+
+  { id: 88, name: 'Egg Curry (2 pcs / 4 pcs) (Half)', price: 100, category: 'Non-Vegetarian Cuisine', image: '🥚' },
+  { id: 89, name: 'Egg Curry (2 pcs / 4 pcs) (Full)', price: 180, category: 'Non-Vegetarian Cuisine', image: '🥚' },
+
+  { id: 90, name: 'Egg Bhurji (Half)', price: 80, category: 'Non-Vegetarian Cuisine', image: '🍳' },
+  { id: 91, name: 'Egg Bhurji (Full)', price: 150, category: 'Non-Vegetarian Cuisine', image: '🍳' },
+
+  { id: 92, name: 'Homemade Chicken (Most Loved) (Half)', price: 280, category: 'Non-Vegetarian Cuisine', image: '🍗' },
+  { id: 93, name: 'Homemade Chicken (Most Loved) (Full)', price: 500, category: 'Non-Vegetarian Cuisine', image: '🍗' },
+
+  { id: 94, name: 'Kadhai Chicken (Half)', price: 260, category: 'Non-Vegetarian Cuisine', image: '🍗' },
+  { id: 95, name: 'Kadhai Chicken (Full)', price: 500, category: 'Non-Vegetarian Cuisine', image: '🍗' },
+
+  { id: 96, name: 'Butter Chicken (Half)', price: 260, category: 'Non-Vegetarian Cuisine', image: '🍗' },
+  { id: 97, name: 'Butter Chicken (Full)', price: 500, category: 'Non-Vegetarian Cuisine', image: '🍗' },
+
+  { id: 98, name: 'Homemade Chicken Boneless (Half)', price: 320, category: 'Non-Vegetarian Cuisine', image: '🍖' },
+  { id: 99, name: 'Homemade Chicken Boneless (Full)', price: 520, category: 'Non-Vegetarian Cuisine', image: '🍖' },
+
+  { id: 100, name: 'Kadhai Chicken Boneless (Half)', price: 280, category: 'Non-Vegetarian Cuisine', image: '🍖' },
+  { id: 101, name: 'Kadhai Chicken Boneless (Full)', price: 520, category: 'Non-Vegetarian Cuisine', image: '🍖' },
+
+  { id: 102, name: 'Butter Chicken Boneless (Half)', price: 280, category: 'Non-Vegetarian Cuisine', image: '🍖' },
+  { id: 103, name: 'Butter Chicken Boneless (Full)', price: 520, category: 'Non-Vegetarian Cuisine', image: '🍖' },
+  {
+    id: 104,
+    name: 'Egg Curry Thali (2 Eggs Curry, 3 Roti, Rice, Raita, Achaar, Salad)',
+    price: 140,
+    category: 'Thalis (Non-Veg)',
+    image: '🥚'
+  },
+  {
+    id: 105,
+    name: 'Chicken Thali (Chicken Curry (3 pcs), 3 Roti, Rice, Raita, Achaar, Salad)',
+    price: 160,
+    category: 'Thalis (Non-Veg)',
+    image: '🍗'
+  },
+  {
+    id: 106,
+    name: 'Boneless Chicken Thali (Boneless Chicken Curry (3 pcs), 3 Roti, Rice, Raita, Achaar, Salad)',
+    price: 180,
+    category: 'Thalis (Non-Veg)',
+    image: '🍖'
+  },
+  {
+    id: 107,
+    name: 'IPO Special Chicken Thali (Chicken Curry (4 pcs), 3 Roti, 2 Parathas, Rice, Raita, Achaar, Salad, Papad, Sweet)',
+    price: 220,
+    category: 'Thalis (Non-Veg)',
+    image: '🌟'
+  },
+  { id: 108, name: 'Baarood Papad (Roasted Papad)', price: 15, category: 'Desi Sides & Add-ons', image: '🥟' },
+  { id: 109, name: 'Zesty Momos Dip', price: 10, category: 'Desi Sides & Add-ons', image: '🌶️' },
+  { id: 110, name: 'Desi Dahi Delight (Plain Dahi)', price: 20, category: 'Desi Sides & Add-ons', image: '🥣' },
+  { id: 111, name: 'Raita-e-Zaika (Boondi/Vegetable)', price: 50, category: 'Desi Sides & Add-ons', image: '🥗' },
+  { id: 112, name: 'Rajma Rice Bowl', price: 100, category: 'Combo Meals - Veg', image: '🍛' },
+  { id: 113, name: 'Paneer Rice Bowl', price: 160, category: 'Combo Meals - Veg', image: '🧀' },
+  { id: 114, name: 'Tandoori Mayo Rice Bowl', price: 160, category: 'Combo Meals - Veg', image: '🌶️' },
+  { id: 115, name: 'Nuggets Rice Bowl (Veg)', price: 120, category: 'Combo Meals - Veg', image: '🥬' },
+  { id: 116, name: '4 Plain Roti + Paneer Curry', price: 150, category: 'Combo Meals - Veg', image: '🧀' },
+  { id: 117, name: '4 Plain Roti + Dal', price: 80, category: 'Combo Meals - Veg', image: '🥣' },
+  { id: 118, name: '4 Plain Roti + Rajma/Chole', price: 100, category: 'Combo Meals - Veg', image: '🫘' },
+  { id: 119, name: 'Manchurian Gravy (6 pcs) + Fried Rice', price: 160, category: 'Combo Meals - Veg', image: '🥦' },
+  { id: 120, name: 'Manchurian Gravy (6 pcs) + Veggie Noodles', price: 160, category: 'Combo Meals - Veg', image: '🥦' },
+  { id: 121, name: 'Double Egg Curry + Rice/Roti (4 pcs)', price: 120, category: 'Combo Meals - Non-Veg', image: '🥚' },
+  { id: 122, name: 'Chicken Curry (4 Pcs) + Rice/Roti (4 pcs)', price: 150, category: 'Combo Meals - Non-Veg', image: '🍗' },
+  { id: 123, name: 'Egg Bhurji + Roti (4 Pcs)', price: 120, category: 'Combo Meals - Non-Veg', image: '🍳' },
+  { id: 124, name: 'Nuggets Rice Bowl (Chicken)', price: 140, category: 'Combo Meals - Non-Veg', image: '🍗' },
+  { id: 125, name: 'Tawa Roti', price: 10, category: 'Breads', image: '🫓' },
+  { id: 126, name: 'Butter Tawa Roti', price: 12, category: 'Breads', image: '🧈' },
+  { id: 127, name: 'Plain Rice', price: 80, category: 'Rice', image: '🍚' },
+  { id: 128, name: 'Jeera Rice', price: 100, category: 'Rice', image: '🌿' },
+  { id: 129, name: 'Matar Pulao', price: 120, category: 'Rice', image: '🫛' },
+  { id: 130, name: 'Veg Pulao', price: 150, category: 'Rice', image: '🥕' },
+  { id: 131, name: 'Garam Gulabo Jamun (2 Pc)', price: 50, category: 'Sweets & Sides', image: '🍬' },
+  { id: 132, name: 'Thandi Thaliwali Kheer', price: 50, category: 'Sweets & Sides', image: '🍚' },
+  { id: 133, name: 'Shaahi Gajar Ka Halwa (Winter Special)', price: 50, category: 'Sweets & Sides', image: '🥕' },
+  { id: 134, name: 'Masala Chai', price: 25, category: 'Hot & Cold Beverages', image: '☕' },
+  { id: 135, name: 'Hot Coffee', price: 35, category: 'Hot & Cold Beverages', image: '☕' },
+  { id: 136, name: 'Cold Coffee', price: 80, category: 'Hot & Cold Beverages', image: '🥶' },
+  { id: 137, name: 'Nimbu Pani (Lemonade)', price: 40, category: 'Hot & Cold Beverages', image: '🍋' },
+  { id: 138, name: 'Sweet Lassi / Salted Lassi', price: 50, category: 'Hot & Cold Beverages', image: '🥛' },
+  { id: 139, name: 'Cold Drinks (Coke, Sprite, Dew, Mazza etc.)', price: 0, category: 'Hot & Cold Beverages', image: '🥤' },
+  { id: 140, name: 'Banana Shake', price: 70, category: 'Shakes', image: '🍌' },
+  { id: 141, name: 'Badam Milk Shake', price: 80, category: 'Shakes', image: '🥛' },
+  { id: 142, name: 'Vanilla Shake', price: 80, category: 'Shakes', image: '🍦' },
+  { id: 143, name: 'Oreo Cookie Shake', price: 90, category: 'Shakes', image: '🍪' },
+  { id: 144, name: 'Kitkat Shake', price: 90, category: 'Shakes', image: '🍫' },
+  { id: 145, name: 'Classic Chocolate Shake', price: 70, category: 'Shakes', image: '🍫' },
+  { id: 146, name: 'Mango Madness Shake', price: 70, category: 'Shakes', image: '🥭' },
+  { id: 147, name: 'Punjabi Chaap', price: 160, category: 'Tandoori - Chaaps', image: '🍢' },
+  { id: 148, name: 'Malai Chaap', price: 180, category: 'Tandoori - Chaaps', image: '🍢' },
+  { id: 149, name: 'Haryali Chaap', price: 180, category: 'Tandoori - Chaaps', image: '🌿' },
+  { id: 150, name: 'Afghani Chaap', price: 200, category: 'Tandoori - Chaaps', image: '🍢' },
+  
+  { id: 151, name: 'Masala Paneer Tikka', price: 200, category: 'Tandoori - Starters Veg', image: '🧀' },
+  { id: 152, name: 'Malai Paneer Tikka', price: 220, category: 'Tandoori - Starters Veg', image: '🧀' },
+  { id: 153, name: 'Mushroom Tikka', price: 200, category: 'Tandoori - Starters Veg', image: '🍄' },
+
+  { id: 154, name: 'Tandoori Chicken', price: 280, category: 'Tandoori - Starters Non-Veg', image: '🍗' },
+  { id: 155, name: 'Lemon Tandoori Chicken', price: 320, category: 'Tandoori - Starters Non-Veg', image: '🍗' },
+  { id: 156, name: 'Chicken Tikka', price: 320, category: 'Tandoori - Starters Non-Veg', image: '🍗' },
+  { id: 157, name: 'Malai Chicken Tikka', price: 360, category: 'Tandoori - Starters Non-Veg', image: '🍗' },
+
+  { id: 158, name: 'Tandoori Roti', price: 15, category: 'Tandoori - Breads & Combos', image: '🫓' },
+  { id: 159, name: 'Butter Tandoori Roti', price: 20, category: 'Tandoori - Breads & Combos', image: '🧈' },
+  { id: 160, name: 'Naan', price: 50, category: 'Tandoori - Breads & Combos', image: '🫓' },
+  { id: 161, name: 'Butter Naan', price: 60, category: 'Tandoori - Breads & Combos', image: '🧈' },
+  { id: 162, name: 'Aalu Naan + Chole + Chutney', price: 80, category: 'Tandoori - Breads & Combos', image: '🥔' },
+  
+
+
+
+
+
   ];
+  
 
   const categories = [...new Set(foodItems.map(item => item.category))];
   const filteredItems = searchQuery
